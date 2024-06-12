@@ -2,7 +2,7 @@ import React from 'react'
 
 const image2 = "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
 
-function Card({ title, duration, cost, onDelete, index }) {
+function Card({ title, duration, cost, onDelete, index, onUpdate }) {
 
   return (
     <>
@@ -25,8 +25,8 @@ function Card({ title, duration, cost, onDelete, index }) {
               <h6 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">${cost}</h6>
               <div className='flex gap-1.5'>
                 <button
-
-                  className=" bg-green-500 border-0 py-1 px-2 focus:outline-none hover:bg-red-600 rounded text-md"
+                  onClick={onUpdate}
+                  className=" bg-green-500 border-0 py-1 px-2 focus:outline-none hover:bg-green-600 rounded text-md"
                 >
                   <svg
                     class="w-6 h-6 text-white dark:text-white"
